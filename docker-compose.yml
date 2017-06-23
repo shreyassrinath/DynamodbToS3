@@ -1,0 +1,16 @@
+version: '2'
+services:
+    export_myDynamoDbTable1_image:
+        build:
+            context: . 
+            args:
+                ddbTable: myDynamoDbTable1
+                s3Bucket: myS3Bucket
+       
+    export_myDynamoDbTable2_image:
+        build:
+            context: . 
+            args:
+                ddbTable: myDynamoDbTable2
+                s3Bucket: myS3Bucket               
+    
